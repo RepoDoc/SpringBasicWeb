@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: student-services
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: RJPARNA
+Implementation-Vendor-Id: com.in28minutes.springboot
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/student-services-security
+Created-By: Maven Integration for Eclipse
+
