@@ -5,3 +5,24 @@ http://www.hubberspot.com/2012/09/how-to-use-model-java-pojo-classes-with.html
 http://localhost:8080/
 
 https://www.baeldung.com/spring-mvc-form-tutorial
+
+
+Water Quality Feedback form
+1.	What is the delivery time for water? 
+2.	Delivery in your area is it timely i.e. when required?
+3.	What is the rate for one Jar (20 lit)?
+4.	Water delivered in summer is cold or not 
+5.	If we increase the rate by Rs. 5( i.e. instead of 10 Rs. 15) then will you buy water or not?
+6.	How do you pay for Jar via ATM or cash or free
+7.	How is the quality of water (taste, appearance, odor etc)
+8.	What was the membership fee?
+9.	Dose jar is cleaned properly especially from the inner side?
+10.	How you will rate the behavior of the operator (1-5) and Driver (1-5)
+11.	What are the timings for RO plant operations (when is the RO plant is open)
+12.	Dose water ATM at RO plant works 24x7 or not?
+13.	Have you checked the water quality report? Do you know about it (these reports are available at Plant)
+14.	Any other issue or suggestions
+15. Name
+16. Village 
+17. At what interval you buy Jar (and how many jars at one time)
+18. RO plant name from whom you are buying water
