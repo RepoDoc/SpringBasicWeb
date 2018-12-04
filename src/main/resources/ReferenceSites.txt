@@ -1,0 +1,7 @@
+https://github.com/RepoDoc/SpringBasicWeb
+
+http://www.hubberspot.com/2012/09/how-to-use-model-java-pojo-classes-with.html
+
+http://localhost:8080/
+
+https://www.baeldung.com/spring-mvc-form-tutorial

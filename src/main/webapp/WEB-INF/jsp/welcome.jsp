@@ -1,137 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+ pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Water Quality Data Collection Form </title>
+</head>
 <body>
 
-<h1>Water Quality Data Collection Form [richaminda@gmail.com][M4dqPr6q]</h1>
-<form action="category">
-  <input type="radio" name="type" value="household"> Household     
-  <input type="radio" name="type" value="community"> Community
-</form>
-<br>
-<form action="user">
-  First Name: <input type="text" name="fname">
-  Last Name: <input type="text" name="lname">
-</form>
-<br>
-<form action="waterTime">
-  1. What is the delivery time for water:<br>  
-  <input type="radio" name="type" value="morning">08am - 10am  
-  <input type="radio" name="type" value="day">11am - 1am  
-  <input type="radio" name="type" value="afternoon">02pm - 4am  
-</form>
-<br>
-<form action="waterCost">
-  2. What is the cost for one jar (20 Litre):<br>  
-  <input type="radio" name="type" value="rs5">Rs.5  
-  <input type="radio" name="type" value="rs10">Rs.10
-<input type="radio" name="type" value="rs15">Rs.15
-</form>
-<br>
-<form action="h2oTime">
-  3. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  4. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  5. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  6. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  7. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  8. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  9. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  10. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  11. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  12. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  13. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  14. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  15. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  16. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  17. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
-</form>
-<br>
-<form action="h2oTime">
-  18. Is delivery in your area timely when required:<br>  
-  <input type="radio" name="type" value="household">Yes  
-  <input type="radio" name="type" value="household">No
+<%@ page import="com.in28minutes.springboot.model.Feedback" %> 
+<%@ page import="com.in28minutes.springboot.service.FeedbackService"%> 
+<%
+  // Get the form requests 
+//   String firstName = request.getParameter("firstName");
+//   String lastName = request.getParameter("lastName");
+//   String emailAddress = request.getParameter("emailAddress");
+  
+  // Get the complete real path for subscription.txt
+//   ServletContext context = request.getServletContext();
+//   String filePath = context.getRealPath("/subscription.txt");
+  Feedback feedback = new Feedback(); 
+  FeedbackService fbService= new FeedbackService();
+ 
+ %>
+ 
+ <SCRIPT language="JavaScript">
+           
+     function submitForm()
+     {  
+    	alert("::::::");
+     	feedback.setName(request.getParameter("name"));
+     	feedback.setVillage(request.getParameter("village"));                	  
+     	fbService.save(feedback);
+     }    
+     function resetForm()
+     {
+         alert("resetl");
+     }    
+           
+</SCRIPT>
+
+<!-- <h1>[richaminda@gmail.com][M4dqPr6q]</h1> -->
+<form NAME="feedbackForm">
+   Name: <input type="text" name="name"> <br><br>
+   Village: <input type="text" name="village"> <br><br>
+   
+   <input type="submit" value="Submit" onClick='submitForm()'>
+   <input type="reset" value="Reset" onClick='resetForm()'>
 </form>
 
 
 
 
-<br>
-
-<form action="submission">
-	<input type="submit" value="Submit">
-	<input type="reset" value="Reset">
-</form>
 
 </body>
 </html>
