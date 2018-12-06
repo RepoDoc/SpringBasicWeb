@@ -6,7 +6,7 @@
 </head>
 <body>
    <h3>Water Quality Data Collection Form </h3>
-   <form:form method="POST" action="/spring-mvc-xml/addFeedback" modelAttribute="feedback">
+   <form:form method="POST" action="/addFeedback" modelAttribute="feedback">
         <table>
            <tr>
                <td><form:label path="name">Name:</form:label></td>

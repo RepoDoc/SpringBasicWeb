@@ -1,4 +1,4 @@
-package com.websystique.springboot.configuration;
+package com.in28minutes.springboot.configuration;
 
 import java.util.Properties;
 
@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "com.websystique.springboot.repositories",
+@EnableJpaRepositories(basePackages = "com.in28minutes.springboot.repositories",
 		entityManagerFactoryRef = "entityManagerFactory",
 		transactionManagerRef = "transactionManager")
 @EnableTransactionManagement
@@ -76,7 +76,7 @@ public class JpaConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws NamingException {
 		LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
 		factoryBean.setDataSource(dataSource());
-		factoryBean.setPackagesToScan(new String[] { "com.websystique.springboot.model" });
+		factoryBean.setPackagesToScan(new String[] { "com.in28minutes.springboot.model" });
 		factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
 		factoryBean.setJpaProperties(jpaProperties());
 		return factoryBean;
