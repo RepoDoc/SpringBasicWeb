@@ -1,10 +1,11 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>	
 </head>
 <body>
-    <h3>Submitted Feedback</h3>
-    <form:form method="GET" action="/listFeedback" modelAttribute="feedback">
+    <h3>Feedback successfully submitted.</h3>
+    <form:form method="POST" action="/listFeedback" modelAttribute="feedback">
 	    <table>
 	        <tr>
 	            <td>Name</td>
@@ -109,7 +110,7 @@
 	        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
 	           
 	        <tr>
-	       	   <td></td>
+	       	    <td></td>
 	            <td><input type="submit" value="Show List"/></td>
 	        </tr>
 	    </table>
