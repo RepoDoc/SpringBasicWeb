@@ -41,5 +41,14 @@ public class FeedbackController {
         feedbackService.submitFeedback(model,feedback);        
         return "feedbackHome";
     }
+    
+    @RequestMapping(value="/listFeedback", method = RequestMethod.GET)
+    public String getListFeedback(@Valid @ModelAttribute("feedback")Feedback feedback,BindingResult result, ModelMap model) {
+    	if (result.hasErrors()) {
+            return "error";
+        }
+    	feedbackService.listFeedback();
+    	return "feedbackList";
+    }
 
 }

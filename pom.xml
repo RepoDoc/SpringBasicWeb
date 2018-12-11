@@ -98,8 +98,14 @@
 		    <artifactId>spring-boot-autoconfigure</artifactId>
 		    <version>1.4.3.RELEASE</version>
 		</dependency>
-
-		
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-dependencies</artifactId>
+		    <version>1.5.9.RELEASE</version>
+		    <type>pom</type>
+		    <scope>provided</scope>
+		</dependency>		
 		<!-- Add Hikari Connection Pooling support -->
 		<dependency>
 			<groupId>com.zaxxer</groupId>
@@ -120,6 +126,17 @@
     		<groupId>org.apache.commons</groupId>
     		<artifactId>commons-lang3</artifactId>
     		<version>3.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.0.0.GA</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>4.3.1.Final</version>
 		</dependency>
 		
 	</dependencies>
